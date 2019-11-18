@@ -60,7 +60,7 @@ def start_check():
         k.tap_key(k.tab_key)
         k.release_key(k.alt_key)
         print('切换')
-        time.sleep(1)
+        time.sleep(5)
         bnet_img = screenshot_bnet()
         gps = dingwei(bnet_img, '2.png')
         os.remove(bnet_img)
@@ -75,5 +75,6 @@ def start_check():
 
 if __name__ == '__main__':
     while True:
+        print('开始检测……')
         start_check()
         time.sleep(10)
